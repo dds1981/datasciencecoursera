@@ -30,6 +30,7 @@ Download Files and Load Them into R
 
 Create the Final Tidy Data Set
 - Reshaped the HAR Data using melt_frame and dcast
+
 *Credit to classmate Lachlan Brown for his method in the discussion forums*
 https://class.coursera.org/getdata-015/forum/thread?thread_id=219#post-1019
 
