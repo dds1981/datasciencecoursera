@@ -45,7 +45,8 @@ Add the Activity Labels
 - Create a Factor of the Activity Labels
 - Convert the Numbers into Plain Language Variables
 
-*Credit to Course TA David Hood for the as.character(factor()) approach*
+*Credit to Course TA Ray Jones for the as.character(factor()) approach*
+https://class.coursera.org/getdata-015/forum/thread?thread_id=112#comment-281
 
 
 Create the Final Tidy Data Set
@@ -55,5 +56,6 @@ Create the Final Tidy Data Set
 https://class.coursera.org/getdata-015/forum/thread?thread_id=219#post-1019
 
 Write the Tidy Data to a Text File
+- Used write.table using space (" ") as a separator and row.names=FALSE
 
 
