@@ -1,17 +1,16 @@
 #Install relevant packages
 install.packages(c("dplyr","reshape2","tidyr"))
 
+# SET UP ENVIRONMENT
 #Issue Library commands
 library(dplyr)
 library(reshape2)
 library(tidyr)
 
-
-
-#Clear Environment
+#Clear Variables in Environment
 rm(list=ls())
 
-#Extract Data
+#DOWNLOAD FILES AND LOAD THEM INTO R
 
 #Import Test Data
 Y_Test<-read.table("./UCI HAR Dataset/test/Y_test.txt")
@@ -63,7 +62,7 @@ character_vector=as.character(names(HAR_Data2[ , 3:68]))
 melt_frame=melt(HAR_Data2, id="index_column", measure.vars=character_vector)
 tidyHAR_Data=dcast(melt_frame, index_column~variable, mean)
 tidyHAR_Data<-separate(tidyHAR_Data, index_column, into=c("Activity","Subject"))
-tidyHAR_Data<-arrange(tidyHAR_Data, Activity, as.numeric(Subject))
+tidyHAR_Data<-arrange(tidyHAR_Data, as.numeric(Subject), Activity)
 
 
 
