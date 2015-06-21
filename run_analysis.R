@@ -57,11 +57,11 @@ HAR_Data2[,1]<-as.character(factor(HAR_Data2[,1],labels=ActivityNames$V2))
 HAR_Data2<-setNames(HAR_Data2,gsub("[[:punct:]]","",names(HAR_Data2)))
 
 # Create the final tidy data set grouped by Activity and Subject
-HAR_Data2$index_column <- paste(HAR_Data2$Activity, HAR_Data2$Subject, sep="_")
+HAR_Data2$index_column <- paste(HAR_Data2$Subject, HAR_Data2$Activity, sep="_")
 character_vector=as.character(names(HAR_Data2[ , 3:68]))
 melt_frame=melt(HAR_Data2, id="index_column", measure.vars=character_vector)
 tidyHAR_Data=dcast(melt_frame, index_column~variable, mean)
-tidyHAR_Data<-separate(tidyHAR_Data, index_column, into=c("Activity","Subject"))
+tidyHAR_Data<-separate(tidyHAR_Data, index_column, into=c("Subject", "Activity"))
 tidyHAR_Data<-arrange(tidyHAR_Data, as.numeric(Subject), Activity)
 
 
