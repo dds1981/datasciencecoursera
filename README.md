@@ -16,6 +16,7 @@ Getting & Cleaning Data Course Project
 - Combine Files 
 
 Set Up Environment
+
 *(WARNING -- YOU MAY WANT TO COMMENT OUT THIS SECTION BEFORE RUNNING THE SCRIPT)
 - Install and load the relevant packages for the analysis (dplyr, reshape2, tidyr)
 - Delete all variables and values from the environment(rm(list=ls())
